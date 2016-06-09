@@ -7,12 +7,12 @@ class Solution
 public:
 	string reverseString(string s)
 	{
-		int i = 0, n = s.length();
+		int n = s.length();
 		string s_out;
-		while (i < n)
+		while (n > 0)
 		{
-			s_out.insert(0, &s.at(i),1);
-			i++;
+			s_out += s.substr(n - 1, 1);
+			n--;
 		}
 		return s_out;
 	}
